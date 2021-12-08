@@ -5,4 +5,4 @@ declare class TwitterError extends Error {
 declare namespace TwitterError {
     export { fromJson };
 }
-declare function fromJson(json: any): import("./TwitterError") | null;
+declare function fromJson(json: any): import("./TwitterError");
