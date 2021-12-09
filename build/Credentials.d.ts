@@ -1,4 +1,4 @@
-/// <reference types="node" />
+import { URL } from 'universal-url';
 declare interface ApplicationConsumerCredentials {
     consumer_key: string;
     consumer_secret: string;

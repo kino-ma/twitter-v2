@@ -1,7 +1,7 @@
 import OAuth from 'oauth-1.0a';
 import crypto from 'crypto';
 import fetch from 'node-fetch';
-import { Url as URL } from 'url';
+import { URL } from 'universal-url';
 
 import TwitterError from './TwitterError';
 
