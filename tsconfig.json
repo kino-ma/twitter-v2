@@ -12,8 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "outDir": "build",
-    "removeComments": true,
-    "strict": false,
+    "removeComments": true
   },
 
   "include": ["src/**/*"]

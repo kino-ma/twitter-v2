@@ -298,8 +298,7 @@ export default class Credentials {
   }
 
   async authorizationHeader(
-    // @ts-ignore
-    url,
+    url: URL,
     request: { method: string; body?: object }
   ): Promise<string> {
     if (this.appAuth()) {

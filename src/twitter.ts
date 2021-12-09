@@ -1,5 +1,6 @@
 import AbortController from 'abort-controller';
 import fetch from 'node-fetch';
+import { URL } from 'url';
 
 import Credentials, { CredentialsArgs } from './Credentials';
 import TwitterError from './TwitterError.js';
@@ -10,7 +11,6 @@ export declare interface RequestParameters {
 }
 
 function applyParameters(
-  // @ts-ignore
   url: URL,
   parameters?: RequestParameters,
   prefix?: string
@@ -43,7 +43,6 @@ export default class Twitter {
     endpoint: string,
     parameters?: RequestParameters
   ): Promise<T> {
-    // @ts-ignore
     const url = new URL(`https://api.twitter.com/2/${endpoint}`);
     applyParameters(url, parameters);
 
@@ -68,7 +67,6 @@ export default class Twitter {
     body: object,
     parameters?: RequestParameters
   ): Promise<T> {
-    // @ts-ignore
     const url = new URL(`https://api.twitter.com/2/${endpoint}`);
     applyParameters(url, parameters);
 
@@ -96,7 +94,6 @@ export default class Twitter {
     endpoint: string,
     parameters?: RequestParameters
   ): Promise<T> {
-    // @ts-ignore
     const url = new URL(`https://api.twitter.com/2/${endpoint}`);
     applyParameters(url, parameters);
 
@@ -126,7 +123,6 @@ export default class Twitter {
 
     return new TwitterStream(
       async () => {
-        // @ts-ignore
         const url = new URL(`https://api.twitter.com/2/${endpoint}`);
         applyParameters(url, parameters);
 

@@ -1,3 +1,4 @@
+/// <reference types="node" />
 declare interface ApplicationConsumerCredentials {
     consumer_key: string;
     consumer_secret: string;
@@ -26,15 +27,15 @@ export default class Credentials {
     private _bearer_token_promise?;
     private _oauth?;
     constructor(args: CredentialsArgs);
-    get consumer_key(): string;
-    get consumer_secret(): string;
-    get bearer_token(): string;
-    get access_token_key(): string;
-    get access_token_secret(): string;
+    get consumer_key(): string | undefined;
+    get consumer_secret(): string | undefined;
+    get bearer_token(): string | undefined;
+    get access_token_key(): string | undefined;
+    get access_token_secret(): string | undefined;
     appAuth(): boolean;
     userAuth(): boolean;
     createBearerToken(): Promise<void>;
-    authorizationHeader(url: any, request: {
+    authorizationHeader(url: URL, request: {
         method: string;
         body?: object;
     }): Promise<string>;
