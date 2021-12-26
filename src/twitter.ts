@@ -1,6 +1,6 @@
 import AbortController from 'abort-controller';
 import fetch from 'node-fetch';
-import { URL } from 'universal-url';
+import { URL } from './url';
 
 import Credentials, { CredentialsArgs } from './Credentials';
 import TwitterError from './TwitterError.js';

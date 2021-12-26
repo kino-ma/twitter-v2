@@ -56,7 +56,6 @@
     "abort-controller": "3.0.0",
     "node-fetch": "2.6.1",
     "oauth-1.0a": "2.2.6",
-    "split": "1.0.1",
-    "universal-url": "^2.0.0"
+    "split": "1.0.1"
   }
 }
